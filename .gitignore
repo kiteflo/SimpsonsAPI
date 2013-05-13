@@ -1,0 +1,4 @@
+/neo4j-db/
+/target/
+/tomcat.8080/
+/bin
