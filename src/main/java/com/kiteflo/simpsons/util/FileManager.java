@@ -3,6 +3,7 @@ package com.kiteflo.simpsons.util;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
@@ -102,6 +103,24 @@ public class FileManager
 		}
 		
 		return contents.toString();
+	}
+	
+	/**
+	 * Convert file to byte array.
+	 * @param file
+	 * @return
+	 * @throws FileNotFoundException
+	 * @throws IOException
+	 */
+	public static byte[] convertFileToByteArray(File file)
+		throws FileNotFoundException, IOException
+	{
+		FileInputStream in = new FileInputStream(file);
+		byte[] data = new byte[(int) file.length()];    
+		in.read(data);
+		in.close();
+		
+		return data;
 	}
 	
 	// ------------------------------------------------------------------------

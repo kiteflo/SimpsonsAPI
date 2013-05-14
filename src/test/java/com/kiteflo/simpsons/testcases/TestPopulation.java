@@ -1,7 +1,8 @@
 package com.kiteflo.simpsons.testcases;
 
+import java.io.File;
+
 import org.apache.log4j.Logger;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +36,7 @@ public class TestPopulation
 
 	@Test
 	public void testPopulate()
+		throws Exception
 	{
 		logger.info("Popluating graph...");
 		
@@ -53,6 +55,7 @@ public class TestPopulation
 		habitant.setFirstname("Homer");
 		habitant.setLastname("Simpson");
 		habitant.getVoiceActors().add(voiceActor);
+		habitant.setImage(FileManager.convertFileToByteArray(new File("images/01_homer.png")));
 		simpsonsRepository.save(habitant);
 		
 	}

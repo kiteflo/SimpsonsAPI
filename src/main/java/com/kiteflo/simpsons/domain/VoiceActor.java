@@ -3,6 +3,8 @@ package com.kiteflo.simpsons.domain;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import org.neo4j.graphdb.Direction;
 import org.springframework.data.neo4j.annotation.GraphId;
 import org.springframework.data.neo4j.annotation.NodeEntity;
@@ -14,6 +16,7 @@ import com.kiteflo.simpsons.relations.Relationships;
  * Real life voice actor for Simpsons character...
  */
 @NodeEntity
+@XmlRootElement
 public class VoiceActor
 {
 	// ------------------------------------------------------------------------

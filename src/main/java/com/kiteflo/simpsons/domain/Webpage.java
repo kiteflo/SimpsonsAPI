@@ -1,5 +1,7 @@
 package com.kiteflo.simpsons.domain;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import org.springframework.data.neo4j.annotation.GraphId;
 import org.springframework.data.neo4j.annotation.NodeEntity;
 
@@ -7,6 +9,7 @@ import org.springframework.data.neo4j.annotation.NodeEntity;
  * Webpage representation...
  */
 @NodeEntity
+@XmlRootElement
 public class Webpage
 {
 	// ------------------------------------------------------------------------
