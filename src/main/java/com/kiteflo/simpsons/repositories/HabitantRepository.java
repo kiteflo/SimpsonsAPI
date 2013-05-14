@@ -14,7 +14,7 @@ import com.kiteflo.simpsons.domain.Habitant;
 @Repository
 public interface HabitantRepository extends GraphRepository<Habitant>
 {
-	@Query("start simpsons=node:__types__(className='Habitant') " +
+	@Query("start simpsons=node:__types__(className='com.kiteflo.simpsons.domain.Habitant') " +
 		   "return simpsons")
 	public Page<Habitant> findAllHabitants(Pageable page);
 }
