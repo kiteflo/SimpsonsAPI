@@ -29,8 +29,8 @@ public class VoiceActor
 	private String firstname;
 	private String lastname;
 	
-	// image - ugly but for the Springfield case totally fine...
-	private byte[] image;
+	// image URL
+	private String imageURL;
 	
 	@RelatedTo(type = Relationships.WEBLINKS, direction = Direction.OUTGOING)
 	private Set<Webpage> weblinks = new HashSet<Webpage>();
@@ -86,13 +86,13 @@ public class VoiceActor
 		this.id = id;
 	}
 
-	public byte[] getImage()
+	public String getImageURL()
 	{
-		return image;
+		return imageURL;
 	}
 
-	public void setImage(byte[] image)
+	public void setImageURL(String imageURL)
 	{
-		this.image = image;
+		this.imageURL = imageURL;
 	}
 }

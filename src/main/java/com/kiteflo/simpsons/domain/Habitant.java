@@ -32,8 +32,8 @@ public class Habitant
 	private int age;
 	private String description;
 	
-	// image - ugly but for the Springfield case totally fine...
-	private byte[] image;
+	// image path
+	private String imageURL;
 	
 	
 	@RelatedTo(type = Relationships.SPOKEN_BY, direction = Direction.INCOMING)
@@ -123,13 +123,13 @@ public class Habitant
 		this.id = id;
 	}
 
-	public byte[] getImage()
+	public String getImageURL()
 	{
-		return image;
+		return imageURL;
 	}
 
-	public void setImage(byte[] image)
+	public void setImageURL(String imageURL)
 	{
-		this.image = image;
+		this.imageURL = imageURL;
 	}
 }
