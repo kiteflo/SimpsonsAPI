@@ -30,15 +30,51 @@ public class Habitant
 	private String lastname;
 	private String imagePath;
 	private int age;
+	private float weight;
 	private String description;
+	private String occupation;
+	private String catchPhrase;
+	private String maidenName;
+	private String otherFacts;
 	
 	// image path
 	private String imageURL;
 	
+	// human relations
+	@RelatedTo(type = Relationships.IS_FATHER_OF, direction = Direction.OUTGOING)
+	private Set<Habitant> kids = new HashSet<Habitant>();
 	
-	@RelatedTo(type = Relationships.SPOKEN_BY, direction = Direction.INCOMING)
-	private Set<VoiceActor> voiceActors = new HashSet<VoiceActor>();
-
+	@RelatedTo(type = Relationships.IS_BROTHER_OF, direction = Direction.OUTGOING)
+	private Set<Habitant> brothers = new HashSet<Habitant>();
+	
+	@RelatedTo(type = Relationships.IS_SISTER_OF, direction = Direction.OUTGOING)
+	private Set<Habitant> sisters = new HashSet<Habitant>();
+	
+	@RelatedTo(type = Relationships.IS_MARRIED_WITH, direction = Direction.OUTGOING)
+	private Set<Habitant> marriagePartner = new HashSet<Habitant>();
+	
+	@RelatedTo(type = Relationships.IS_FRIEND_OF, direction = Direction.OUTGOING)
+	private Set<Habitant> friends = new HashSet<Habitant>();
+	
+	@RelatedTo(type = Relationships.IS_ENEMY_OF, direction = Direction.OUTGOING)
+	private Set<Habitant> enemies = new HashSet<Habitant>();
+	
+	@RelatedTo(type = Relationships.PAST_LOVES, direction = Direction.OUTGOING)
+	private Set<Habitant> pastLoves = new HashSet<Habitant>();
+	
+	// object relationships
+	@RelatedTo(type = Relationships.LIKES_FOOD, direction = Direction.OUTGOING)
+	private Set<FavFood> favFoods = new HashSet<FavFood>();
+	
+	@RelatedTo(type = Relationships.LIKES_DRINK, direction = Direction.OUTGOING)
+	private Set<FavDrink> favDrinks = new HashSet<FavDrink>();
+	
+	@RelatedTo(type = Relationships.HAS_HOBBY, direction = Direction.OUTGOING)
+	private Set<Hobby> hobbies = new HashSet<Hobby>();
+	
+	@RelatedTo(type = Relationships.IS_AFRAID_OF, direction = Direction.OUTGOING)
+	private Set<Fear> fears = new HashSet<Fear>();
+	
 	// ------------------------------------------------------------------------
 	// overridden stuff
 	// ------------------------------------------------------------------------
@@ -103,16 +139,6 @@ public class Habitant
 		this.imagePath = imagePath;
 	}
 
-	public Set<VoiceActor> getVoiceActors()
-	{
-		return voiceActors;
-	}
-
-	public void setVoiceActors(Set<VoiceActor> voiceActors)
-	{
-		this.voiceActors = voiceActors;
-	}
-
 	public Long getId()
 	{
 		return id;
@@ -131,5 +157,165 @@ public class Habitant
 	public void setImageURL(String imageURL)
 	{
 		this.imageURL = imageURL;
+	}
+
+	public String getOccupation()
+	{
+		return occupation;
+	}
+
+	public void setOccupation(String occupation)
+	{
+		this.occupation = occupation;
+	}
+
+	public String getCatchPhrase()
+	{
+		return catchPhrase;
+	}
+
+	public void setCatchPhrase(String catchPhrase)
+	{
+		this.catchPhrase = catchPhrase;
+	}
+
+	public Set<Habitant> getKids()
+	{
+		return kids;
+	}
+
+	public void setKids(Set<Habitant> kids)
+	{
+		this.kids = kids;
+	}
+
+	public Set<Habitant> getBrothers()
+	{
+		return brothers;
+	}
+
+	public void setBrothers(Set<Habitant> brothers)
+	{
+		this.brothers = brothers;
+	}
+
+	public Set<Habitant> getSisters()
+	{
+		return sisters;
+	}
+
+	public void setSisters(Set<Habitant> sisters)
+	{
+		this.sisters = sisters;
+	}
+
+	public Set<Habitant> getMarriagePartner()
+	{
+		return marriagePartner;
+	}
+
+	public void setMarriagePartner(Set<Habitant> marriagePartner)
+	{
+		this.marriagePartner = marriagePartner;
+	}
+
+	public Set<Habitant> getFriends()
+	{
+		return friends;
+	}
+
+	public void setFriends(Set<Habitant> friends)
+	{
+		this.friends = friends;
+	}
+
+	public Set<Habitant> getEnemies()
+	{
+		return enemies;
+	}
+
+	public void setEnemies(Set<Habitant> enemies)
+	{
+		this.enemies = enemies;
+	}
+
+	public Set<FavFood> getFavFoods()
+	{
+		return favFoods;
+	}
+
+	public void setFavFoods(Set<FavFood> favFoods)
+	{
+		this.favFoods = favFoods;
+	}
+
+	public Set<FavDrink> getFavDrinks()
+	{
+		return favDrinks;
+	}
+
+	public void setFavDrinks(Set<FavDrink> favDrinks)
+	{
+		this.favDrinks = favDrinks;
+	}
+
+	public Set<Hobby> getHobbies()
+	{
+		return hobbies;
+	}
+
+	public void setHobbies(Set<Hobby> hobbies)
+	{
+		this.hobbies = hobbies;
+	}
+
+	public Set<Fear> getFears()
+	{
+		return fears;
+	}
+
+	public void setFears(Set<Fear> fears)
+	{
+		this.fears = fears;
+	}
+
+	public float getWeight()
+	{
+		return weight;
+	}
+
+	public void setWeight(float weight)
+	{
+		this.weight = weight;
+	}
+
+	public String getMaidenName()
+	{
+		return maidenName;
+	}
+
+	public void setMaidenName(String maidenName)
+	{
+		this.maidenName = maidenName;
+	}
+
+	public String getOtherFacts()
+	{
+		return otherFacts;
+	}
+
+	public void setOtherFacts(String otherFacts)
+	{
+		this.otherFacts = otherFacts;
+	}
+
+	public Set<Habitant> getPastLoves()
+	{
+		return pastLoves;
+	}
+
+	public void setPastLoves(Set<Habitant> pastLoves)
+	{
+		this.pastLoves = pastLoves;
 	}
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="3.028" errors="0" skipped="0" tests="1" name="com.kiteflo.simpsons.testcases.TestPopulation">
+<testsuite failures="0" time="3.384" errors="0" skipped="0" tests="1" name="com.kiteflo.simpsons.testcases.TestPopulation">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries"/>
@@ -22,7 +22,7 @@
     <property name="basedir" value="/Users/tzhmufl2/development/repositories/SimpsonsAPI"/>
     <property name="java.endorsed.dirs" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed"/>
     <property name="os.arch" value="x86_64"/>
-    <property name="surefire.real.class.path" value="/var/folders/cp/jgr3b23d225fr26qvf6wvvfr0000gn/T/surefirebooter6672217332041113707.jar"/>
+    <property name="surefire.real.class.path" value="/var/folders/cp/jgr3b23d225fr26qvf6wvvfr0000gn/T/surefirebooter4906643386979582965.jar"/>
     <property name="java.io.tmpdir" value="/var/folders/cp/jgr3b23d225fr26qvf6wvvfr0000gn/T/"/>
     <property name="line.separator" value="
 "/>
@@ -35,7 +35,6 @@
     <property name="java.class.version" value="50.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.8.3"/>
-    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="user.home" value="/Users/tzhmufl2"/>
     <property name="user.timezone" value="Europe/Zurich"/>
     <property name="java.awt.printerjob" value="apple.awt.CPrinterJob"/>
@@ -46,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.0"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"/>
-    <property name="sun.java.command" value="/var/folders/cp/jgr3b23d225fr26qvf6wvvfr0000gn/T/surefirebooter6672217332041113707.jar /var/folders/cp/jgr3b23d225fr26qvf6wvvfr0000gn/T/surefire4284913576678596455tmp /var/folders/cp/jgr3b23d225fr26qvf6wvvfr0000gn/T/surefire1239819351483209121tmp"/>
+    <property name="sun.java.command" value="/var/folders/cp/jgr3b23d225fr26qvf6wvvfr0000gn/T/surefirebooter4906643386979582965.jar /var/folders/cp/jgr3b23d225fr26qvf6wvvfr0000gn/T/surefire8724878090031649501tmp /var/folders/cp/jgr3b23d225fr26qvf6wvvfr0000gn/T/surefire7936271267911827694tmp"/>
     <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
     <property name="user.language" value="de"/>
     <property name="awt.toolkit" value="apple.awt.CToolkit"/>
@@ -61,9 +60,7 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="mrj.version" value="1070.1.6.0_45-451"/>
-    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.31" classname="com.kiteflo.simpsons.testcases.TestPopulation" name="testPopulate"/>
+  <testcase time="0.344" classname="com.kiteflo.simpsons.testcases.TestPopulation" name="testPopulateSimpsonsCore"/>
 </testsuite>

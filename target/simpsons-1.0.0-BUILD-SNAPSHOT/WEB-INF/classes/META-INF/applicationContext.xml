@@ -33,7 +33,7 @@
 	<tx:annotation-driven />
 
 	<beans profile="default">
-		<neo4j:config storeDirectory="/Users/tzhmufl2/temp/myneo" />
+		<neo4j:config storeDirectory="mytestneo" />
 	</beans>
 
 	<beans profile="prod">

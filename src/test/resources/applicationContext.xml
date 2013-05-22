@@ -28,7 +28,7 @@
     <tx:annotation-driven />
 
     <beans profile="default">
-        <neo4j:config storeDirectory="neo4j-db"/>
+        <neo4j:config storeDirectory="mytestneo"/>
     </beans>
 
     <beans profile="prod">
